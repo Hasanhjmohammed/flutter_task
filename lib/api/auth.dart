@@ -54,7 +54,7 @@ Future<void>register(String username,String password,String phone,String fullnam
     print("=======================");
     var jsondate=jsonDecode(res.body);
     print(jsondate);
-    if(res.statusCode ==200){
+    if(res.statusCode == 200){
       SharedPreferences prefs = await SharedPreferences.getInstance();
       var jsondate=json.decode(res.body);
       print(jsondate.toString());
@@ -65,7 +65,7 @@ Future<void>register(String username,String password,String phone,String fullnam
     }
     if(res.statusCode!=200){
       var jsondate=json.decode(res.body);
-      throw jsondate['message'];
+     // throw jsondate['message'];
     }
 
   }catch(e){

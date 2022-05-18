@@ -6,8 +6,8 @@ class user{
   String? phone;
   String? city;
   user({
-    required this.name,
-   required this.pass,
+   this.name,
+ this.pass,
     this.city,
     this.phone,
     this.full});

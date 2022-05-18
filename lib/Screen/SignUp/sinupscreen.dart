@@ -27,7 +27,7 @@ class _SinUpState extends State<SinUp> {
   String? pass;
   String? phone;
   String? city;
-  user ?I;
+  user ?I=user();
   GlobalKey<FormState> _mykey = GlobalKey();
   @override
   Widget build(BuildContext context) {
@@ -92,7 +92,7 @@ class _SinUpState extends State<SinUp> {
                                I!.pass!,
                                 I!.phone!,
                                I!.full!,
-                                  " cnn");
+                                  I!.city!);
                                    // I.name!);
                                    setState(() {
                                   widget.isloding=false;

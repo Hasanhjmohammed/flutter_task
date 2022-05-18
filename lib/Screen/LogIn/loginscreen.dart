@@ -18,7 +18,7 @@ class LogIn extends StatefulWidget {
 
 class _LogInState extends State<LogIn> {
   GlobalKey<FormState> _mykey = GlobalKey();
-  user ?I;
+  user ?I=user();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -79,12 +79,13 @@ class _LogInState extends State<LogIn> {
                             SizedBox(height: 60,),
 
                           ],),
-                      )
+                      ),
                   ),
                   MainButtom(titel: "Login",function: ()async{
                     if (!_mykey.currentState!.validate()) {
                       return null;
                     }
+                    _mykey.currentState!.save();
                     try{
                      setState(() {
                        widget.isloding=true;
